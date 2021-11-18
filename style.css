@@ -53,14 +53,13 @@ body {
 	transform-origin: left;
 }
 
-
 .two::after,
 .two::before {
 	position: absolute;
 	content: '';
 	width: 0px;
 	height: 0px;
-    /* transition: 0.7s; */
+	/* transition: 0.7s; */
 	/* background-color: white; */
 }
 
@@ -69,7 +68,6 @@ body {
 	top: 0px;
 	border-right: 0 solid #ffff;
 	border-bottom: 0 solid #ffff;
-
 }
 
 .two::after {
@@ -80,16 +78,63 @@ body {
 }
 
 .two:hover::after {
-    border-right: 3px solid #ffff;
+	border-right: 3px solid #ffff;
 	border-bottom: 3px solid #ffff;
-    width: 50px;
-    height: 50%;
-
+	width: 50px;
+	height: 50%;
 }
 
 .two:hover::before {
-    border-left: 3px solid #ffff;
+	border-left: 3px solid #ffff;
 	border-top: 3px solid #ffff;
-    width: 50px;
-    height: 50%;
+	width: 50px;
+	height: 50%;
+}
+
+.three::before, .three::after{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 55px;
+	border-bottom: 3px solid #ffff;
+}
+
+.three::before{
+	right: 50%;
+}
+
+.three::after{
+	left: 50%;
+}
+
+.three:hover::before{
+	width: 50%;
+}
+
+.three:hover::after{
+	width: 50%;
+}
+
+.four{
+	z-index: 1;
+}
+
+.four:hover{
+	color: blue;
+}
+
+.four::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 0;
+	left: 0;
+	width: 100%;
+	background-color: aqua;
+}
+
+
+.four:hover::after{
+	height: 100%;
+	z-index: -1;
 }
